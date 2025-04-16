@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Position content at the top */
     justify-content: flex-start;
 }
 
@@ -22,9 +21,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    width: 100%;
-    max-width: 400px;
+    width: auto;
+    
+    max-width: 90%;
     margin-top: 2rem;
+    text-align: center;
 }
 
 input {
@@ -42,13 +43,13 @@ input:focus {
 
 button {
     padding: 0.4rem 1rem;
-    /* smaller height and width */
+    
     margin-top: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     width: auto;
-    /* keeps button tight around text */
+  
     min-width: 100px;
 }
 
@@ -60,7 +61,7 @@ button:hover {
     margin-top: 1rem;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
     body {
         padding: 1rem;
