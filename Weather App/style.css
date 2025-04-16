@@ -1,13 +1,15 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: url(images/default.jpg);
+    background: url(images/default.jpg) no-repeat center center;
+    background-size: cover;
     text-align: center;
     padding: 2rem;
     background-color: transparent;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 80vh;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .weather-container {
@@ -18,13 +20,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
 }
 
 input {
     padding: 0.5rem;
-    width: 200px;
+    width: 100%;
     border: none;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -32,37 +37,31 @@ input:focus {
     border: none;
 }
 
-button:hover {
-    border: none;
-}
-
 button {
     padding: 0.5rem;
-    margin-left: 10px;
+    margin-top: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    border: none;
 }
 
 #weatherResult {
     margin-top: 1rem;
 }
 
-
+/* Responsive */
 @media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
     .weather-container {
-        width: 90%;
         padding: 1.5rem;
     }
-
-    input {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    button {
-        width: 100%;
-        margin: 0;
-    }
 }
-
