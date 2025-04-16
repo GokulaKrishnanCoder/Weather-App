@@ -1,6 +1,6 @@
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    background:url(images/default.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(images/default.jpg);
     text-align: center;
     padding: 2rem;
     background-color: transparent;
@@ -8,32 +8,33 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 80vh;
-    
 }
 
-
- .weather-container {
-     background: rgba(255, 255, 255, 0.2);
-     padding: 2rem;
-     border-radius: 10px;
-     display: inline-block;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-     backdrop-filter: blur(10px);
-     -webkit-backdrop-filter: blur(10px);
- }
+.weather-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
 
 input {
     padding: 0.5rem;
     width: 200px;
     border: none;
     border-radius: 5px;
-    
 }
+
 input:focus {
     outline: none;
     border: none;
 }
-button:hover{ border: none;}
+
+button:hover {
+    border: none;
+}
 
 button {
     padding: 0.5rem;
@@ -46,3 +47,22 @@ button {
 #weatherResult {
     margin-top: 1rem;
 }
+
+
+@media (max-width: 600px) {
+    .weather-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        width: 100%;
+        margin: 0;
+    }
+}
+
