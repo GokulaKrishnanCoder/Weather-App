@@ -8,8 +8,10 @@ body {
     height: 100vh;
     margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* Position content at the top */
+    justify-content: flex-start;
 }
 
 .weather-container {
@@ -22,11 +24,12 @@ body {
     -webkit-backdrop-filter: blur(10px);
     width: 100%;
     max-width: 400px;
+    margin-top: 2rem;
 }
 
 input {
     padding: 0.5rem;
-    width: 100%;
+    width: 70%;
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
@@ -38,13 +41,15 @@ input:focus {
 }
 
 button {
-    padding: 0.5rem;
+    padding: 0.4rem 1rem;
+    /* smaller height and width */
     margin-top: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
+    width: auto;
+    /* keeps button tight around text */
+    min-width: 100px;
 }
 
 button:hover {
@@ -63,5 +68,15 @@ button:hover {
 
     .weather-container {
         padding: 1.5rem;
+    }
+
+    input {
+        width: 70%;
+        margin-bottom: 0.5rem;
+    }
+
+    button {
+        width: 70%;
+        
     }
 }
